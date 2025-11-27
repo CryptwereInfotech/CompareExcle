@@ -36,6 +36,8 @@
             this.lblTallyStatus = new System.Windows.Forms.Label();
             this.lblStatus = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblMergeExcelStatus = new System.Windows.Forms.Label();
+            this.txt_margeExcel = new System.Windows.Forms.Button();
             this.txt_cmbFilterDev = new DevExpress.XtraEditors.LookUpEdit();
             this.cmbFilter = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -45,10 +47,10 @@
             this.lblMatched = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.BtnExit = new System.Windows.Forms.Button();
-            this.btnExport = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnRefresh = new System.Windows.Forms.Button();
+            this.btnExport = new System.Windows.Forms.Button();
+            this.BtnExit = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txt_cmbFilterDev.Properties)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -126,6 +128,8 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.groupBox1.Controls.Add(this.lblMergeExcelStatus);
+            this.groupBox1.Controls.Add(this.txt_margeExcel);
             this.groupBox1.Controls.Add(this.txt_cmbFilterDev);
             this.groupBox1.Controls.Add(this.cmbFilter);
             this.groupBox1.Controls.Add(this.btnUploadExcel);
@@ -137,10 +141,32 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1346, 112);
+            this.groupBox1.Size = new System.Drawing.Size(1346, 158);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "ExcelComper";
+            // 
+            // lblMergeExcelStatus
+            // 
+            this.lblMergeExcelStatus.AutoSize = true;
+            this.lblMergeExcelStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMergeExcelStatus.Location = new System.Drawing.Point(1027, 138);
+            this.lblMergeExcelStatus.Name = "lblMergeExcelStatus";
+            this.lblMergeExcelStatus.Size = new System.Drawing.Size(50, 17);
+            this.lblMergeExcelStatus.TabIndex = 10;
+            this.lblMergeExcelStatus.Text = "status:";
+            this.lblMergeExcelStatus.Visible = false;
+            // 
+            // txt_margeExcel
+            // 
+            this.txt_margeExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_margeExcel.Location = new System.Drawing.Point(1018, 92);
+            this.txt_margeExcel.Name = "txt_margeExcel";
+            this.txt_margeExcel.Size = new System.Drawing.Size(265, 43);
+            this.txt_margeExcel.TabIndex = 9;
+            this.txt_margeExcel.Text = "Merge Excel Sheets";
+            this.txt_margeExcel.UseVisualStyleBackColor = true;
+            this.txt_margeExcel.Click += new System.EventHandler(this.txt_margeExcel_Click);
             // 
             // txt_cmbFilterDev
             // 
@@ -149,13 +175,13 @@
             // 
             // 
             // 
-            this.txt_cmbFilterDev.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.txt_cmbFilterDev.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
             this.txt_cmbFilterDev.Properties.Appearance.Options.UseFont = true;
             this.txt_cmbFilterDev.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.txt_cmbFilterDev.Properties.NullText = "Please Select";
             this.txt_cmbFilterDev.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
-            this.txt_cmbFilterDev.Size = new System.Drawing.Size(200, 30);
+            this.txt_cmbFilterDev.Size = new System.Drawing.Size(200, 36);
             this.txt_cmbFilterDev.TabIndex = 1;
             this.txt_cmbFilterDev.EditValueChanged += new System.EventHandler(this.txt_cmbFilterDev_EditValueChanged);
             // 
@@ -174,9 +200,9 @@
             this.groupBox2.Controls.Add(this.panel1);
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(12, 130);
+            this.groupBox2.Location = new System.Drawing.Point(12, 176);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1346, 436);
+            this.groupBox2.Size = new System.Drawing.Size(1346, 390);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Mismatched  Deta";
@@ -238,38 +264,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(1329, 382);
             this.dataGridView1.TabIndex = 10;
             // 
-            // BtnExit
-            // 
-            this.BtnExit.BackColor = System.Drawing.SystemColors.Control;
-            this.BtnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnExit.Font = new System.Drawing.Font("Verdana", 11.25F);
-            this.BtnExit.Image = ((System.Drawing.Image)(resources.GetObject("BtnExit.Image")));
-            this.BtnExit.Location = new System.Drawing.Point(96, 12);
-            this.BtnExit.Name = "BtnExit";
-            this.BtnExit.Padding = new System.Windows.Forms.Padding(0, 0, 0, 2);
-            this.BtnExit.Size = new System.Drawing.Size(165, 44);
-            this.BtnExit.TabIndex = 11;
-            this.BtnExit.Text = "  E&xit";
-            this.BtnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnExit.UseVisualStyleBackColor = false;
-            this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
-            // 
-            // btnExport
-            // 
-            this.btnExport.BackColor = System.Drawing.SystemColors.Control;
-            this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExport.Font = new System.Drawing.Font("Verdana", 11.25F);
-            this.btnExport.Image = ((System.Drawing.Image)(resources.GetObject("btnExport.Image")));
-            this.btnExport.Location = new System.Drawing.Point(284, 12);
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Padding = new System.Windows.Forms.Padding(0, 0, 0, 2);
-            this.btnExport.Size = new System.Drawing.Size(165, 44);
-            this.btnExport.TabIndex = 13;
-            this.btnExport.Text = "  &Export";
-            this.btnExport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnExport.UseVisualStyleBackColor = false;
-            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
-            // 
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -298,17 +292,52 @@
             this.btnRefresh.UseVisualStyleBackColor = false;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
+            // btnExport
+            // 
+            this.btnExport.BackColor = System.Drawing.SystemColors.Control;
+            this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExport.Font = new System.Drawing.Font("Verdana", 11.25F);
+            this.btnExport.Image = ((System.Drawing.Image)(resources.GetObject("btnExport.Image")));
+            this.btnExport.Location = new System.Drawing.Point(284, 12);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Padding = new System.Windows.Forms.Padding(0, 0, 0, 2);
+            this.btnExport.Size = new System.Drawing.Size(165, 44);
+            this.btnExport.TabIndex = 13;
+            this.btnExport.Text = "  &Export";
+            this.btnExport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnExport.UseVisualStyleBackColor = false;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            // 
+            // BtnExit
+            // 
+            this.BtnExit.BackColor = System.Drawing.SystemColors.Control;
+            this.BtnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnExit.Font = new System.Drawing.Font("Verdana", 11.25F);
+            this.BtnExit.Image = ((System.Drawing.Image)(resources.GetObject("BtnExit.Image")));
+            this.BtnExit.Location = new System.Drawing.Point(96, 12);
+            this.BtnExit.Name = "BtnExit";
+            this.BtnExit.Padding = new System.Windows.Forms.Padding(0, 0, 0, 2);
+            this.BtnExit.Size = new System.Drawing.Size(165, 44);
+            this.BtnExit.TabIndex = 11;
+            this.BtnExit.Text = "  E&xit";
+            this.BtnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnExit.UseVisualStyleBackColor = false;
+            this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(1370, 659);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MismatchDeta Find";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -344,6 +373,8 @@
         private System.Windows.Forms.Label lblMissingBook;
         private System.Windows.Forms.Label lblMatched;
         private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.Button txt_margeExcel;
+        private System.Windows.Forms.Label lblMergeExcelStatus;
     }
 }
 

@@ -33,9 +33,13 @@
             this.masterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ProductLine = new System.Windows.Forms.ToolStripSeparator();
             this.menuProduct = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.userMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comparExcelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ProductCategoryLine = new System.Windows.Forms.ToolStripSeparator();
             this.menuPhysicalVerification = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.productListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,7 +47,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.masterToolStripMenuItem,
-            this.comparExcelToolStripMenuItem});
+            this.comparExcelToolStripMenuItem,
+            this.reportToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 31);
@@ -54,7 +59,9 @@
             // 
             this.masterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ProductLine,
-            this.menuProduct});
+            this.menuProduct,
+            this.toolStripSeparator1,
+            this.userMasterToolStripMenuItem});
             this.masterToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold);
             this.masterToolStripMenuItem.Name = "masterToolStripMenuItem";
             this.masterToolStripMenuItem.Size = new System.Drawing.Size(83, 27);
@@ -75,6 +82,19 @@
             this.menuProduct.Size = new System.Drawing.Size(240, 26);
             this.menuProduct.Text = "ProductMaster";
             this.menuProduct.Click += new System.EventHandler(this.menuProduct_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(237, 6);
+            // 
+            // userMasterToolStripMenuItem
+            // 
+            this.userMasterToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 15F);
+            this.userMasterToolStripMenuItem.Name = "userMasterToolStripMenuItem";
+            this.userMasterToolStripMenuItem.Size = new System.Drawing.Size(240, 26);
+            this.userMasterToolStripMenuItem.Text = "UserMaster";
+            this.userMasterToolStripMenuItem.Click += new System.EventHandler(this.userMasterToolStripMenuItem_Click);
             // 
             // comparExcelToolStripMenuItem
             // 
@@ -102,15 +122,38 @@
             this.menuPhysicalVerification.Text = "Physical Verification";
             this.menuPhysicalVerification.Click += new System.EventHandler(this.menuPhysicalVerification_Click);
             // 
+            // reportToolStripMenuItem
+            // 
+            this.reportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.productListToolStripMenuItem});
+            this.reportToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold);
+            this.reportToolStripMenuItem.Name = "reportToolStripMenuItem";
+            this.reportToolStripMenuItem.Size = new System.Drawing.Size(81, 27);
+            this.reportToolStripMenuItem.Text = "Report";
+            // 
+            // productListToolStripMenuItem
+            // 
+            this.productListToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 15F);
+            this.productListToolStripMenuItem.Name = "productListToolStripMenuItem";
+            this.productListToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.productListToolStripMenuItem.Text = "ProductList";
+            this.productListToolStripMenuItem.Click += new System.EventHandler(this.productListToolStripMenuItem_Click);
+            // 
             // MainParent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuStrip1);
+            this.DoubleBuffered = true;
+            this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainParent";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainParent";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -127,5 +170,9 @@
         private System.Windows.Forms.ToolStripMenuItem comparExcelToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator ProductCategoryLine;
         private System.Windows.Forms.ToolStripMenuItem menuPhysicalVerification;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem userMasterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem productListToolStripMenuItem;
     }
 }

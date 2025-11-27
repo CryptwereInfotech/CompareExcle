@@ -48,5 +48,15 @@ namespace ComperExleSheet
                 childForm.Show();
             }
         }
+
+        private void userMasterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenChildForm<UserMaster>();
+        }
+
+        private void productListToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenChildForm<FrmStockReport>();
+        }
     }
 }

@@ -1,0 +1,10 @@
+D:\Ram\ExcelCompare\ComperExleSheet\obj\Release\ComperExleSheet.csproj.AssemblyReference.cache
+D:\Ram\ExcelCompare\ComperExleSheet\obj\Release\ComperExleSheet.Form1.resources
+D:\Ram\ExcelCompare\ComperExleSheet\obj\Release\ComperExleSheet.FrmStockReport.resources
+D:\Ram\ExcelCompare\ComperExleSheet\obj\Release\ComperExleSheet.MainParent.resources
+D:\Ram\ExcelCompare\ComperExleSheet\obj\Release\ComperExleSheet.ProductMaster.resources
+D:\Ram\ExcelCompare\ComperExleSheet\obj\Release\ComperExleSheet.Properties.Resources.resources
+D:\Ram\ExcelCompare\ComperExleSheet\obj\Release\ComperExleSheet.UserMaster.resources
+D:\Ram\ExcelCompare\ComperExleSheet\obj\Release\ComperExleSheet.csproj.GenerateResource.cache
+D:\Ram\ExcelCompare\ComperExleSheet\obj\Release\ComperExleSheet.exe.licenses
+D:\Ram\ExcelCompare\ComperExleSheet\obj\Release\ComperExleSheet.csproj.CoreCompileInputs.cache

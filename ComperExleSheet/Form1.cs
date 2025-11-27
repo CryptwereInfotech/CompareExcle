@@ -268,313 +268,6 @@ namespace ComperExleSheet
             }
         }
 
-        //private void btnCompare_Click(object sender, EventArgs e)
-        //{
-        //    if(ExcelData == null || ExcelData.Count == 0)
-        //    {
-        //        MessageBox.Show("Please upload the Physical Stock Exel file  first.","Validation",MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        //        return;
-        //    }
-
-        //    if(tallyExcelData == null || tallyExcelData.Count==0)
-        //    {
-        //        MessageBox.Show("Please Uplod the Book Stock(Tally) Excel file first.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        //        return;
-        //    }
-        //    //var result = new List<dynamic>();
-        //    comparisonResult = new List<dynamic>();
-        //    var result = comparisonResult;
-        //    var matchedKeys = new HashSet<string>();
-        //    foreach (var excelItem in ExcelData)
-        //    {
-        //        var tallyItem = tallyExcelData.FirstOrDefault(t =>
-        //            t.CatNo.Trim() == excelItem.CATNUMBER.Trim() &&
-        //            t.BatchNo.Trim() == excelItem.LotNumber.Trim());
-
-        //        if (tallyItem == null)
-        //        {
-        //            result.Add(new
-        //            {
-        //                excelItem.SrNo,
-        //                excelItem.ItemName,
-        //                excelItem.CATNUMBER,
-        //                excelItem.Qty,
-        //                excelItem.ExpiryDate,
-        //                excelItem.LotNumber,
-        //                excelItem.StockCategory,
-        //                excelItem.StockGroup,
-        //                Status = "Missing in Book Stock"
-        //            });
-        //        }
-        //        //else
-        //        //{
-        //        //    matchedKeys.Add(tallyItem.CatNo.Trim() + "|" + tallyItem.BatchNo.Trim());
-        //        //    bool isQtyMismatch = excelItem.Qty.Trim() != tallyItem.Qty.Trim();
-
-        //        //    result.Add(new
-        //        //    {
-        //        //        excelItem.SrNo,
-        //        //        ItemName = excelItem.ItemName,
-        //        //        CATNUMBER = excelItem.CATNUMBER,
-        //        //        Qty = excelItem.Qty,
-        //        //        ExpiryDate = excelItem.ExpiryDate,
-        //        //        LotNumber = excelItem.LotNumber,
-        //        //        StockCategory = excelItem.StockCategory,
-        //        //        StockGroup = excelItem.StockGroup,
-        //        //        Status = isQtyMismatch ? "Qty Mismatch" : "Matched"
-        //        //    });
-        //        //}
-        //        else
-        //        {
-        //            matchedKeys.Add(tallyItem.CatNo.Trim() + "|" + tallyItem.BatchNo.Trim());
-
-        //            int excelQty = 0, tallyQty = 0;
-        //            int.TryParse(excelItem.Qty.Trim(), out excelQty);
-        //            int.TryParse(tallyItem.Qty.Trim(), out tallyQty);
-
-        //            string status;
-        //            if (excelQty != tallyQty)
-        //            {
-        //                int diff = Math.Abs(excelQty - tallyQty);
-        //                if (excelQty > tallyQty)
-        //                    status = $"Book stock missing {diff} Qty";
-        //                else
-        //                    status = $"Physical stock missing {diff} Qty";
-        //            }
-        //            else
-        //            {
-        //                status = "Matched";
-        //            }
-
-        //            result.Add(new
-        //            {
-        //                excelItem.SrNo,
-        //                ItemName = excelItem.ItemName,
-        //                CATNUMBER = excelItem.CATNUMBER,
-        //                Qty = excelItem.Qty,
-        //                ExpiryDate = excelItem.ExpiryDate,
-        //                LotNumber = excelItem.LotNumber,
-        //                StockCategory = excelItem.StockCategory,
-        //                StockGroup = excelItem.StockGroup,
-        //                Status = status
-        //            });
-        //        }
-
-        //    }
-
-        //    foreach (var tallyItem in tallyExcelData)
-        //    {
-        //        string key = tallyItem.CatNo.Trim() + "|" + tallyItem.BatchNo.Trim();
-        //        if (!matchedKeys.Contains(key))
-        //        {
-        //            result.Add(new
-        //            {
-        //                SrNo = "-",
-        //                ItemName = tallyItem.Description,
-        //                CATNUMBER = tallyItem.CatNo,
-        //                Qty = tallyItem.Qty,
-        //                ExpiryDate = tallyItem.ExpiryDate,
-        //                LotNumber = tallyItem.BatchNo,
-        //                StockCategory = tallyItem.Category,
-        //                StockGroup = tallyItem.Group,
-        //                Status = "Missing in Physical Stock"
-        //            });
-        //        }
-        //    }
-
-        //    dataGridView1.DataSource = result;
-        //    dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-        //    dataGridView1.AutoResizeColumns();
-        //    dataGridView1.AutoResizeRows();
-        //    dataGridView1.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
-
-        //    foreach (DataGridViewRow row in dataGridView1.Rows)
-        //    {
-        //        string status = row.Cells["Status"].Value?.ToString();
-        //        if (status == "Matched")
-        //            row.DefaultCellStyle.BackColor = Color.LightGreen;
-        //        //else if (status == "Qty Mismatch")
-        //        //    row.DefaultCellStyle.BackColor = Color.Yellow;
-        //        else if (status == "Missing in Book Stock")
-        //            row.DefaultCellStyle.BackColor = Color.LightPink;
-        //        else if (status == "Missing in Physical Stock")
-        //            row.DefaultCellStyle.BackColor = Color.Orange;
-        //        else if (status.Contains("Book stock missing") || status.Contains("Physical stock missing"))
-        //            row.DefaultCellStyle.BackColor = Color.Yellow;
-        //    }
-
-        //    int total = comparisonResult.Count;
-        //    int matched = comparisonResult.Count(x => (string)x.GetType().GetProperty("Status")?.GetValue(x) == "Matched");
-        //    int qtyMismatch = comparisonResult.Count(x => (string)x.GetType().GetProperty("Status")?.GetValue(x) == "Qty Mismatch");
-        //    int missingBook = comparisonResult.Count(x => (string)x.GetType().GetProperty("Status")?.GetValue(x) == "Missing in Book Stock");
-        //    int missingPhysical = comparisonResult.Count(x => (string)x.GetType().GetProperty("Status")?.GetValue(x) == "Missing in Physical Stock");
-        //    int missingPhysicalStockmisingQty = comparisonResult.Count(x => (string)x.GetType().GetProperty("Status")?.GetValue(x) == "Physical stock missing");
-
-        //    lblTotal.Text = $"Total: {total}";
-        //    lblMatched.Text = $"Matched: {matched}";
-        //    lblQtyMismatch.Text = $"Qty Mismatch: {qtyMismatch}";
-        //    lblMissingBook.Text = $"Missing in Book: {missingBook}";
-        //    lblMissingPhysical.Text = $"Missing in Physical: {missingPhysical}";
-
-        //    lblStatus.Text = "Comparison completed.";
-        //    lblStatus.Text = "Comparison completed.";
-        //}
-        //private void btnCompare_Click(object sender, EventArgs e)
-        //{
-        //    if (ExcelData == null || ExcelData.Count == 0)
-        //    {
-        //        MessageBox.Show("Please upload the Physical Stock Exel file  first.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        //        return;
-        //    }
-
-        //    if (tallyExcelData == null || tallyExcelData.Count == 0)
-        //    {
-        //        MessageBox.Show("Please Uplod the Book Stock(Tally) Excel file first.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        //        return;
-        //    }
-        //    //var result = new List<dynamic>();
-        //    comparisonResult = new List<dynamic>();
-        //    var result = comparisonResult;
-        //    var matchedKeys = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
-        //    foreach (var excelItem in ExcelData)
-        //    {
-        //        var tallyItem = tallyExcelData.FirstOrDefault(t =>
-        //        t.CatNo.Trim().Equals(excelItem.CATNUMBER.Trim(), StringComparison.OrdinalIgnoreCase) &&
-        //        t.BatchNo.Trim().Equals(excelItem.LotNumber.Trim(), StringComparison.OrdinalIgnoreCase));
-
-
-        //        if (tallyItem == null)
-        //        {
-        //            result.Add(new
-        //            {
-        //                excelItem.SrNo,
-        //                excelItem.ItemName,
-        //                excelItem.CATNUMBER,
-        //                excelItem.Qty,
-        //                Physical_Qty = excelItem.Qty, 
-        //                Book_Qty = "0",
-        //                excelItem.ExpiryDate,
-        //                excelItem.LotNumber,
-        //                excelItem.StockCategory,
-        //                excelItem.StockGroup,
-        //                Status = $"Missing in Book Stock {excelItem.Qty} Qty"
-        //            });
-        //        }
-        //        //else
-        //        //{
-        //        //    matchedKeys.Add(tallyItem.CatNo.Trim() + "|" + tallyItem.BatchNo.Trim());
-        //        //    bool isQtyMismatch = excelItem.Qty.Trim() != tallyItem.Qty.Trim();
-
-        //        //    result.Add(new
-        //        //    {
-        //        //        excelItem.SrNo,
-        //        //        ItemName = excelItem.ItemName,
-        //        //        CATNUMBER = excelItem.CATNUMBER,
-        //        //        Qty = excelItem.Qty,
-        //        //        ExpiryDate = excelItem.ExpiryDate,
-        //        //        LotNumber = excelItem.LotNumber,
-        //        //        StockCategory = excelItem.StockCategory,
-        //        //        StockGroup = excelItem.StockGroup,
-        //        //        Status = isQtyMismatch ? "Qty Mismatch" : "Matched"
-        //        //    });
-        //        //}
-        //        else
-        //        {
-        //            matchedKeys.Add(tallyItem.CatNo.Trim() + "|" + tallyItem.BatchNo.Trim());
-
-        //            int excelQty = 0, tallyQty = 0;
-        //            int.TryParse(excelItem.Qty.Trim(), out excelQty);
-        //            int.TryParse(tallyItem.Qty.Trim(), out tallyQty);
-
-        //            string status;
-        //            if (excelQty != tallyQty)
-        //            {
-        //                int diff = Math.Abs(excelQty - tallyQty);
-        //                if (excelQty > tallyQty)
-        //                    status = $"Missing in Book Stock  {diff} Qty";
-        //                else
-        //                    status = $"Missing in Physical Stock  {diff} Qty";
-        //            }
-        //            else
-        //            {
-        //                status = "Matched";
-        //            }
-
-        //            result.Add(new
-        //            {
-        //                excelItem.SrNo,
-        //                ItemName = excelItem.ItemName,
-        //                CATNUMBER = excelItem.CATNUMBER,
-        //                Compar_Qty = excelItem.Qty,
-        //                Physical_Qty = excelQty.ToString(),  // New column
-        //                Book_Qty = tallyQty.ToString(),
-        //                ExpiryDate = excelItem.ExpiryDate,
-        //                LotNumber = excelItem.LotNumber,
-        //                StockCategory = excelItem.StockCategory,
-        //                StockGroup = excelItem.StockGroup,
-        //                Status = status
-        //            });
-        //        }
-
-        //    }
-
-        //    foreach (var tallyItem in tallyExcelData)
-        //    {
-        //        string key = tallyItem.CatNo.Trim() + "|" + tallyItem.BatchNo.Trim();
-        //        if (!matchedKeys.Contains(key))
-        //        {
-        //            result.Add(new
-        //            {
-        //                SrNo = "-",
-        //                ItemName = tallyItem.Description,
-        //                CATNUMBER = tallyItem.CatNo,
-        //                Qty = tallyItem.Qty,
-        //                Physical_Qty = "0",               
-        //                Book_Qty = tallyItem.Qty,
-        //                ExpiryDate = tallyItem.ExpiryDate,
-        //                LotNumber = tallyItem.BatchNo,
-        //                StockCategory = tallyItem.Category,
-        //                StockGroup = tallyItem.Group,
-        //                Status = $"Missing in Physical Stock   {tallyItem.Qty} Qty"
-        //            });
-        //        }
-        //    }
-
-        //    dataGridView1.DataSource = result;
-        //    dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-        //    dataGridView1.AutoResizeColumns();
-        //    dataGridView1.AutoResizeRows();
-        //    dataGridView1.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
-
-        //    foreach (DataGridViewRow row in dataGridView1.Rows)
-        //    {
-        //        string status = row.Cells["Status"].Value?.ToString() ?? "";
-
-        //        if (status.Equals("Matched", StringComparison.OrdinalIgnoreCase))
-        //            row.DefaultCellStyle.BackColor = Color.LightGreen;
-        //        else if (status.IndexOf("Missing in Book Stock", StringComparison.OrdinalIgnoreCase) >= 0)
-        //            row.DefaultCellStyle.BackColor = Color.LightPink;
-        //        else if (status.IndexOf("Missing in Physical Stock", StringComparison.OrdinalIgnoreCase) >= 0)
-        //            row.DefaultCellStyle.BackColor = Color.Orange;
-        //    }
-        //    int total = comparisonResult.Count;
-        //    int matched = comparisonResult.Count(x =>
-        //        ((string)x.GetType().GetProperty("Status")?.GetValue(x)).Equals("Matched", StringComparison.OrdinalIgnoreCase));
-
-        //    int missingBook = comparisonResult.Count(x =>
-        //        ((string)x.GetType().GetProperty("Status")?.GetValue(x)).IndexOf("Missing in Book Stock", StringComparison.OrdinalIgnoreCase) >= 0);
-
-        //    int missingPhysical = comparisonResult.Count(x =>
-        //        ((string)x.GetType().GetProperty("Status")?.GetValue(x)).IndexOf("Missing in Physical Stock", StringComparison.OrdinalIgnoreCase) >= 0);
-
-        //    lblTotal.Text = $"Total: {total}";
-        //    lblMatched.Text = $"Matched: {matched}";
-        //    lblMissingBook.Text = $"Missing in Book Stock: {missingBook}";
-        //    lblMissingPhysical.Text = $"Missing in Physical Stock: {missingPhysical}";
-
-        //    lblStatus.Text = "Comparison completed.";
-        //}
-
         public class CaseInsensitiveTupleComparer : IEqualityComparer<(string, string)>
         {
             public bool Equals((string, string) x, (string, string) y)
@@ -617,7 +310,7 @@ namespace ComperExleSheet
                     {
                         TotalQty = g.Sum(ei => int.TryParse(ei.Qty, out var q) ? q : 0),
                         Item = g.First()
-                     
+
                     },
                     new CaseInsensitiveTupleComparer()
                 );
@@ -630,7 +323,7 @@ namespace ComperExleSheet
                     {
                         TotalQty = g.Sum(ti => int.TryParse(ti.Qty, out var q) ? q : 0),
                         Item = g.First()
-                   
+
 
                     },
                     new CaseInsensitiveTupleComparer()
@@ -827,6 +520,8 @@ private void ApplyFilter(string filterType)
             public string Qty { get; set; }
             public string ExpiryDate { get; set; }
             public string LotNumber { get; set; }
+            public string MRP { get; set; }
+            public string TotalValuation { get; set; }
         }
 
         public class TallyProductData
@@ -861,8 +556,10 @@ private void ApplyFilter(string filterType)
             dataGridView1.Rows.Clear();
             dataGridView1.Refresh();
 
-            lblExcelStatus.Text = "";
+            lblExcelStatus.Text = ""; 
             lblExcelStatus.Visible = false;
+            lblMergeExcelStatus.Text = "";
+            lblMergeExcelStatus.Visible = false;
             lblTallyStatus.Text = "";
             lblTallyStatus.Visible = false;
             lblTotal.Text = "";
@@ -898,6 +595,163 @@ private void ApplyFilter(string filterType)
         {
             string selectedValue = txt_cmbFilterDev.EditValue?.ToString();
             ApplyFilter(selectedValue);
+        }
+
+        private void txt_margeExcel_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "Excel Files|*.xlsx;";
+            ofd.Multiselect = true;
+
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                // Check duplicate file names
+                var duplicateNames = ofd.FileNames
+                    .Select(Path.GetFileName)
+                    .GroupBy(n => n, StringComparer.OrdinalIgnoreCase)
+                    .Where(g => g.Count() > 1)
+                    .Select(g => g.Key)
+                    .ToList();
+
+                if (duplicateNames.Any())
+                {
+                    MessageBox.Show(
+                        $"You selected duplicate files:\n{string.Join("\n", duplicateNames)}\nPlease remove duplicates and try again.",
+                        "Duplicate Files", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                var tempList = new List<ProductData>();
+
+                //foreach (var file in ofd.FileNames)
+                //{
+                //    using (var workbook = new XLWorkbook(file))
+                //    {
+                //        var worksheet = workbook.Worksheet(1);
+                //        var rows = worksheet.RangeUsed().RowsUsed().Skip(1);
+
+                //        foreach (var row in rows)
+                //        {
+                //            tempList.Add(new ProductData
+                //            {
+                //                SrNo = row.Cell(1).GetString(),
+                //                ItemName = row.Cell(2).GetString(),
+                //                CATNUMBER = row.Cell(3).GetString(),
+                //                GTIN = row.Cell(4).GetString(),
+                //                StockGroup = row.Cell(5).GetString(),
+                //                StockCategory = row.Cell(6).GetString(),
+                //                UOM = row.Cell(7).GetString(),
+                //                HSN = row.Cell(8).GetString(),
+                //                IGSTRate = row.Cell(9).GetString(),
+                //                Qty = row.Cell(10).GetString(),
+                //                ExpiryDate = row.Cell(11).GetString(),
+                //                LotNumber = row.Cell(12).GetString(),
+                //                MRP = row.Cell(13).GetString(),     // ✅ correct MRP column
+                ///*                User = row.Cell(14).GetString() */    // ✅ new "User" column
+                //            });
+                //        }
+                //    }
+                //}
+                foreach (var file in ofd.FileNames)
+                {
+                    try
+                    {
+                        using (var workbook = new XLWorkbook(file))
+                        {
+                            var worksheet = workbook.Worksheet(1);
+                            var rows = worksheet.RangeUsed().RowsUsed().Skip(1);
+
+                            foreach (var row in rows)
+                            {
+                                tempList.Add(new ProductData
+                                {
+                                    SrNo = row.Cell(1).GetString(),
+                                    ItemName = row.Cell(2).GetString(),
+                                    CATNUMBER = row.Cell(3).GetString(),
+                                    GTIN = row.Cell(4).GetString(),
+                                    StockGroup = row.Cell(5).GetString(),
+                                    StockCategory = row.Cell(6).GetString(),
+                                    UOM = row.Cell(7).GetString(),
+                                    HSN = row.Cell(8).GetString(),
+                                    IGSTRate = row.Cell(9).GetString(),
+                                    Qty = row.Cell(10).GetString(),
+                                    ExpiryDate = row.Cell(11).GetString(),
+                                    LotNumber = row.Cell(12).GetString(),
+                                    MRP = row.Cell(13).GetString(),
+                                    // User = row.Cell(14).GetString()
+                                });
+                            }
+                        }
+                    }
+                    catch (IOException)
+                    {
+                        MessageBox.Show(
+                            $"⚠️ The Excel file '{Path.GetFileName(file)}' is currently open.\nPlease close it and try again.",
+                            "File In Use",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Warning
+                        );
+                        return;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(
+                            $"❌ Error reading file '{Path.GetFileName(file)}': {ex.Message}",
+                            "Read Error",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Error
+                        );
+                        return;
+                    }
+                }
+
+                // Merge duplicates (by CATNUMBER + LotNumber)
+                var mergedData = tempList
+                    .GroupBy(x => new { x.CATNUMBER, x.LotNumber })
+                    .Select(g =>
+                    {
+                        var first = g.First();
+                        double qty = g.Sum(x => double.TryParse(x.Qty, out var q) ? q : 0);
+                        double mrp = double.TryParse(first.MRP, out var m) ? m : 0;
+                        double totalValuation = qty * mrp;
+
+                        return new ProductData
+                        {
+                            SrNo = "",
+                            ItemName = first.ItemName,
+                            CATNUMBER = first.CATNUMBER,
+                            GTIN = first.GTIN,
+                            StockGroup = first.StockGroup,
+                            StockCategory = first.StockCategory,
+                            UOM = first.UOM,
+                            HSN = first.HSN,
+                            IGSTRate = first.IGSTRate,
+                            Qty = qty.ToString(),
+                            MRP = mrp.ToString("0.00"),
+                            TotalValuation = totalValuation.ToString("0.00"),
+                            ExpiryDate = first.ExpiryDate,
+                            LotNumber = first.LotNumber,
+                            //User = first.User
+                        };
+                    })
+                    .OrderBy(x => x.ItemName)
+                    .ToList();
+
+                // Reset SrNo
+                for (int i = 0; i < mergedData.Count; i++)
+                {
+                    mergedData[i].SrNo = (i + 1).ToString();
+                }
+
+                // ✅ Show in grid
+                dataGridView1.DataSource = mergedData;
+                dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                dataGridView1.AutoResizeColumns();
+
+                lblMergeExcelStatus.Text = $"✅ {ofd.FileNames.Length} files merged successfully with valuation.";
+                lblMergeExcelStatus.ForeColor = Color.Green;
+                lblMergeExcelStatus.Visible = true;
+            }
         }
     }
 }

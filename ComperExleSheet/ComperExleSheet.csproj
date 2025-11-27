@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -39,74 +39,93 @@
     <Reference Include="ClosedXML.Parser, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1d5f7376574c51ec, processorArchitecture=MSIL">
       <HintPath>..\packages\ClosedXML.Parser.2.0.0\lib\netstandard2.0\ClosedXML.Parser.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Charts.v17.1.Core">
-      <HintPath>..\..\..\Adinath\Debug\DevExpress.Charts.v17.1.Core.dll</HintPath>
+    <Reference Include="DevExpress.Charts.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Adinath\Debug\DevExpress.Charts.v17.1.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.CodeParser.v17.1">
-      <HintPath>..\..\..\Adinath\Debug\DevExpress.CodeParser.v17.1.dll</HintPath>
+    <Reference Include="DevExpress.CodeParser.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Adinath\Debug\DevExpress.CodeParser.v17.1.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Data.v17.1">
-      <HintPath>..\..\..\Adinath\Debug\DevExpress.Data.v17.1.dll</HintPath>
+    <Reference Include="DevExpress.Data.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Adinath\Debug\DevExpress.Data.v17.1.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.DataAccess.v17.1">
-      <HintPath>..\..\..\Adinath\Debug\DevExpress.DataAccess.v17.1.dll</HintPath>
+    <Reference Include="DevExpress.DataAccess.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Adinath\Debug\DevExpress.DataAccess.v17.1.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Office.v17.1.Core">
-      <HintPath>..\..\..\Adinath\Debug\DevExpress.Office.v17.1.Core.dll</HintPath>
+    <Reference Include="DevExpress.Office.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Adinath\Debug\DevExpress.Office.v17.1.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Pdf.v17.1.Core">
-      <HintPath>..\..\..\Adinath\Debug\DevExpress.Pdf.v17.1.Core.dll</HintPath>
+    <Reference Include="DevExpress.Pdf.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Adinath\Debug\DevExpress.Pdf.v17.1.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.PivotGrid.v17.1.Core">
-      <HintPath>..\..\..\Adinath\Debug\DevExpress.PivotGrid.v17.1.Core.dll</HintPath>
+    <Reference Include="DevExpress.PivotGrid.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Adinath\Debug\DevExpress.PivotGrid.v17.1.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Printing.v17.1.Core">
-      <HintPath>..\..\..\Adinath\Debug\DevExpress.Printing.v17.1.Core.dll</HintPath>
+    <Reference Include="DevExpress.Printing.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Adinath\Debug\DevExpress.Printing.v17.1.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.RichEdit.v17.1.Core">
-      <HintPath>..\..\..\Adinath\Debug\DevExpress.RichEdit.v17.1.Core.dll</HintPath>
+    <Reference Include="DevExpress.RichEdit.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Adinath\Debug\DevExpress.RichEdit.v17.1.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.RichEdit.v17.1.Export">
-      <HintPath>..\..\..\Adinath\Debug\DevExpress.RichEdit.v17.1.Export.dll</HintPath>
+    <Reference Include="DevExpress.RichEdit.v17.1.Export, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Adinath\Debug\DevExpress.RichEdit.v17.1.Export.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Sparkline.v17.1.Core">
-      <HintPath>..\..\..\Adinath\Debug\DevExpress.Sparkline.v17.1.Core.dll</HintPath>
+      <HintPath>E:\Adinath\Debug\DevExpress.Sparkline.v17.1.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Utils.v17.1">
-      <HintPath>..\..\..\Adinath\Debug\DevExpress.Utils.v17.1.dll</HintPath>
+    <Reference Include="DevExpress.Utils.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Adinath\Debug\DevExpress.Utils.v17.1.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Utils.v17.1.UI">
-      <HintPath>..\..\..\Adinath\Debug\DevExpress.Utils.v17.1.UI.dll</HintPath>
+      <HintPath>E:\Adinath\Debug\DevExpress.Utils.v17.1.UI.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Xpo.v17.1">
-      <HintPath>..\..\..\Adinath\Debug\DevExpress.Xpo.v17.1.dll</HintPath>
+    <Reference Include="DevExpress.Xpo.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Adinath\Debug\DevExpress.Xpo.v17.1.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.XtraBars.v17.1">
-      <HintPath>..\..\..\Adinath\Debug\DevExpress.XtraBars.v17.1.dll</HintPath>
+      <HintPath>E:\Adinath\Debug\DevExpress.XtraBars.v17.1.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraCharts.v17.1">
-      <HintPath>..\..\..\Adinath\Debug\DevExpress.XtraCharts.v17.1.dll</HintPath>
+    <Reference Include="DevExpress.XtraCharts.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Adinath\Debug\DevExpress.XtraCharts.v17.1.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.XtraEditors.v17.1">
-      <HintPath>..\..\..\Adinath\Debug\DevExpress.XtraEditors.v17.1.dll</HintPath>
+      <HintPath>E:\Adinath\Debug\DevExpress.XtraEditors.v17.1.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraGauges.v17.1.Core">
-      <HintPath>..\..\..\Adinath\Debug\DevExpress.XtraGauges.v17.1.Core.dll</HintPath>
+    <Reference Include="DevExpress.XtraGauges.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Adinath\Debug\DevExpress.XtraGauges.v17.1.Core.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.XtraGrid.v17.1">
-      <HintPath>..\..\..\Adinath\Debug\DevExpress.XtraGrid.v17.1.dll</HintPath>
+      <HintPath>E:\Adinath\Debug\DevExpress.XtraGrid.v17.1.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraLayout.v17.1">
-      <HintPath>..\..\..\Adinath\Debug\DevExpress.XtraLayout.v17.1.dll</HintPath>
+    <Reference Include="DevExpress.XtraLayout.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Adinath\Debug\DevExpress.XtraLayout.v17.1.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.XtraPrinting.v17.1">
-      <HintPath>..\..\..\Adinath\Debug\DevExpress.XtraPrinting.v17.1.dll</HintPath>
+      <HintPath>E:\Adinath\Debug\DevExpress.XtraPrinting.v17.1.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraReports.v17.1">
-      <HintPath>..\..\..\Adinath\Debug\DevExpress.XtraReports.v17.1.dll</HintPath>
+    <Reference Include="DevExpress.XtraReports.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Adinath\Debug\DevExpress.XtraReports.v17.1.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.XtraReports.v17.1.Extensions">
-      <HintPath>..\..\..\Adinath\Debug\DevExpress.XtraReports.v17.1.Extensions.dll</HintPath>
+      <HintPath>E:\Adinath\Debug\DevExpress.XtraReports.v17.1.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v17.1">
+      <HintPath>E:\Adinath\Debug\DevExpress.XtraTreeList.v17.1.dll</HintPath>
     </Reference>
     <Reference Include="DocumentFormat.OpenXml, Version=3.3.0.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
       <HintPath>..\packages\DocumentFormat.OpenXml.3.3.0\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
@@ -123,11 +142,26 @@
     <Reference Include="ExcelNumberFormat, Version=1.1.0.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
       <HintPath>..\packages\ExcelNumberFormat.1.1.0\lib\net20\ExcelNumberFormat.dll</HintPath>
     </Reference>
+    <Reference Include="FlashControlV71">
+      <HintPath>E:\Adinath\Debug\FlashControlV71.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Bcl.HashCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.HashCode.1.1.1\lib\net461\Microsoft.Bcl.HashCode.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.IO.RecyclableMemoryStream.3.0.1\lib\netstandard2.0\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenNETCF">
+      <HintPath>E:\Adinath\Debug\OpenNETCF.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenNETCF.Desktop.Communication">
+      <HintPath>E:\Adinath\Debug\OpenNETCF.Desktop.Communication.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenNETCF.Net">
+      <HintPath>E:\Adinath\Debug\OpenNETCF.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenNETCF.WindowsCE">
+      <HintPath>E:\Adinath\Debug\OpenNETCF.WindowsCE.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="RBush, Version=4.0.0.0, Culture=neutral, PublicKeyToken=c77e27b81f4d0187, processorArchitecture=MSIL">
@@ -135,6 +169,9 @@
     </Reference>
     <Reference Include="SixLabors.Fonts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d998eea7b14cab13, processorArchitecture=MSIL">
       <HintPath>..\packages\SixLabors.Fonts.1.0.0\lib\netstandard2.0\SixLabors.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="STLib_DD">
+      <HintPath>..\..\..\Vanscale extra\vnscale\Vanscale\Vanscale\bin\Debug\STLib_DD.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
@@ -169,14 +206,24 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="Tulpep.NotificationWindow">
+      <HintPath>E:\Adinath\Debug\Tulpep.NotificationWindow.dll</HintPath>
+    </Reference>
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Agrt.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStockReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStockReport.Designer.cs">
+      <DependentUpon>FrmStockReport.cs</DependentUpon>
     </Compile>
     <Compile Include="MainParent.cs">
       <SubType>Form</SubType>
@@ -192,8 +239,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SecurityHelper.cs" />
+    <Compile Include="UserMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserMaster.Designer.cs">
+      <DependentUpon>UserMaster.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStockReport.resx">
+      <DependentUpon>FrmStockReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainParent.resx">
       <DependentUpon>MainParent.cs</DependentUpon>
@@ -210,7 +267,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserMaster.resx">
+      <DependentUpon>UserMaster.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -224,6 +285,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inbox_imresizer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inbox %281%29_imresizer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EditLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EditLogo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EditLogo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EditLogo %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EditLogo %282%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
